@@ -2,8 +2,7 @@ def call() {
     pipeline {
 
         agent {
-            label 'workstation'
-
+            label 'ansible'
         }
 
         stages {
