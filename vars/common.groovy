@@ -9,7 +9,7 @@ def compile () {
     }
 }
 
-def unittests(){
+def unit tests(){
     if (app_lang == "nodejs") {
        /* Developer is missing unit test cases in our project,they need to add them as best practices, we are skipping to proced further
         sh 'npm install'*/
