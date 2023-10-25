@@ -16,12 +16,13 @@ def call() {
                     }
                 }
 
-                stage('unittests') {
+                stage('unit tests') {
                     steps {
                         script {
                             common.unittests()
                         }
                     }
+                }
 
                     stage('quality control') {
                         steps {
@@ -39,9 +40,11 @@ def call() {
             }
 
         }
-    }
     catch(Exception e) {
         common.email("failed")
     }
+
 }
+
+
 
