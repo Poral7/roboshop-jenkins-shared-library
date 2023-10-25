@@ -28,6 +28,6 @@ def unittests() {
 }
 
 def email(email_note) {
-    sh 'echo $(email_note}'
+    mail bcc: '', body: 'TEST', cc: '', from: 'poralsunil5@gmail.com', replyTo: '', subject: 'TEST FROM JENKINS', to: 'poralsunil5@gmail.com'
 }
 
