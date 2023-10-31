@@ -52,7 +52,6 @@ def call() {
     catch(Exception e) {
         common.email("failed")
     }
-
 }
 
 

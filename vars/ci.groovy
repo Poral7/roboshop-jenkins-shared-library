@@ -2,8 +2,9 @@ def call() {
     try {
         node('workstation') {
 
-            stage('cleanup') {
+            stage('checkout') {
                 cleanWs()
+                git branch: 'main', url: 'https://github.com/Poral7/cart.git'
             }
             stage('compile/Build') {
                 common.compile()
