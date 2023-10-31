@@ -4,7 +4,7 @@ def call() {
 
             stage('checkout') {
                 cleanWs()
-                git branch: 'main', url: 'https://github.com/Poral7/cart.${component}'
+                git branch: 'main', url: "https://github.com/Poral7/cart.${component}"
             }
             stage('compile/Build') {
                 common.compile()
