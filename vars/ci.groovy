@@ -8,6 +8,7 @@ def call() {
             stage('checkout') {
                 cleanWs()
                 git branch: 'main', url: "https://github.com/Poral7/${component}"
+                sh 'env'
             }
             stage('compile/Build') {
                 common.compile()
