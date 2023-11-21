@@ -14,7 +14,7 @@ def unittests() {
     if (app_lang == "nodejs") {
 
 /*
-        Developer is missing unit test cases in our project,they need to add them as best practices, we are skipping to proced further
+        Developer is missing unit test cases in our project,they need to add them as best practices, we are skipping to proceed further
 */      sh 'npm test || true'
     }
 
