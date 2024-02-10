@@ -8,6 +8,9 @@ def compile () {
         sh 'mvn package'
 
     }
+    if (app_lang == "dispatch") {
+        sh 'go mod init dispatch','go get','go build'
+    }
 }
 
 def unittests() {
@@ -27,7 +30,7 @@ def unittests() {
 
     }
 }
-
+ 
 def email(email_note) {
     mail bcc: '', body: "Job Failed - ${JOB_BASE_NAME}\nJenkins URL - ${JOB_URL}", cc: '', from: 'poralsunil5@gmail.com', replyTo: '', subject: "Jenkins Job Failed - ${JOB_BASE_NAME}", to: 'poralsunil5@gmail.com'
 }
