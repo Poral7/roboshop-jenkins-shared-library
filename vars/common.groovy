@@ -9,7 +9,10 @@ def compile () {
 
     }
     if (app_lang == "dispatch") {
-        sh 'go mod init dispatch','go get','go build'
+        sh 'go mod init dispatch'
+        sh 'go get'
+        sh 'go build'
+
     }
 }
 
