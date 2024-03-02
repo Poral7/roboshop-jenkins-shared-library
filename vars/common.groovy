@@ -8,12 +8,7 @@ def compile () {
         sh 'mvn package'
 
     }
-    if (app_lang == "dispatch") {
-        sh 'go mod init dispatch'
-        sh 'go get'
-        sh 'go build'
 
-    }
 }
 
 def unittests() {
