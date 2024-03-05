@@ -36,7 +36,7 @@ def email(email_note) {
 def artifactpush() {
     sh "echo ${TAG_NAME} >VERSION"
     if (app_lang == "nodejs") {
-        sh "zip -r ${component}-${TAG_NAME}.zip node_modules server.js VERSION"
+        sh "zip -r ${component}-${TAG_NAME}.zip node_modules server.js VERSION ${extraFiles}"
     }
 
 
