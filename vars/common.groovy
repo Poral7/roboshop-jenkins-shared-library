@@ -8,7 +8,6 @@ def compile () {
         sh 'mvn package'
 
     }
-
 }
 
 def unittests() {
